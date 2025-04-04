@@ -8,12 +8,19 @@ namespace FlowControl
 {
     public class Repeater
     {
-        public string RepeatInputTenTimes(string input)
+        public string RepeatInputTenTimes()
         {
+            Console.Clear();
+            Console.WriteLine("Write input here for to repeat 10 times: ");
+            string userRepeatInput = Console.ReadLine();
+
             string returnValue = string.Empty;
-            for (int i = 0; i < 10; i++)
+            if (!string.IsNullOrWhiteSpace(userRepeatInput))
             {
-                returnValue += $"{i+1}. {input}, ";
+                for (int i = 0; i < 10; i++)
+                {
+                    returnValue += $"{i + 1}. {userRepeatInput}, ";
+                }
             }
 
             return returnValue;

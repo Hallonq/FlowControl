@@ -40,8 +40,6 @@ namespace FlowControl
 
                 Console.WriteLine($"Company size: {amountOfAttendees}");
                 Console.WriteLine($"Total cost for company: {companyPrice}");
-                Console.WriteLine("Press any key to return to main menu");
-                Console.ReadKey();
             }
 
             return 0;
