@@ -16,16 +16,19 @@ namespace FlowControl
             Console.WriteLine("Please write your message, minimum 3 words");
             var userInput = Console.ReadLine();
 
-            string[] splittedUserInput = userInput.Split(' ');
-            string[] trimmedUserInput = splittedUserInput.Where(x => !string.IsNullOrWhiteSpace(x)).ToArray();
-            if (trimmedUserInput.Length >= 3)
+            if (userInput != null)
             {
-                return returnValue = trimmedUserInput[2];
-            }
-            else
-            {
-                Console.WriteLine("Invalid input");
-                SplitStringAndReturnThirdWord();
+                string[] splittedUserInput = userInput.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+                if (splittedUserInput.Length >= 3)
+                {
+                    return returnValue = splittedUserInput[2];
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input");
+                    SplitStringAndReturnThirdWord();
+                }
             }
 
             return returnValue;

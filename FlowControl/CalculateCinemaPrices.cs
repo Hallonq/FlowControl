@@ -8,8 +8,6 @@ namespace FlowControl
 {
     public class CalculateCinemaPrices
     {
-        public CalculateCinemaPrices() { }
-
         public int CinemaPrices()
         {
             Console.Clear();
